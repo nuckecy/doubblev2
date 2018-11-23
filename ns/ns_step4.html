@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- PAGE settings -->
+  <link rel="icon" href="">
+  <title>Doubble - Let's get to know you.</title>
+  <meta name="description" content="Doubble Sign up form by Sterling Bank Plc">
+  <meta name="keywords" content="Doubble, sterling, sterling bank, savings">
+  <meta name="author" content="Sterling Bank Plc">
+  <!-- CSS dependencies -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="wireframe.css"> 
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-black">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">Doubble</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent"> </div>
+    </div>
+  </nav>
+  <div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="col-12 col-md-12">
+            <h2 class="my-4">Doubble Sign Up</h2>
+            <hr> </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="alert alert-danger p-2 mx-auto col-sm-12 col-md-5" role="alert">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <h4 class="alert-heading">There was a problem!</h4>
+            <p class="mb-0">Place error message here!.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row py-3">
+        <div class="order-md-1 w-100 mx-auto box-shadow p-4 col-sm-12 col-12 col-md-5">
+          <h2 class="mb-3">Select Doubble Package</h2>
+          <p class="my-3">Your final step to starting your savings.</p>
+          <form action="confirmation.html" autocomplete="off">
+            <div class="row">
+              <div class="col-md-6 mb-3" >
+                <label for="firstName">Select Preffered Package</label>
+                <select class="form-control form-control-sm bg-light" required="required">
+                  <option value="">Choose an option</option>
+                  <option value="3">Doubble 3</option>
+                  <option value="5">Doubble 5</option>
+                  <option value="10">Doubble 10</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Monthly Deposit</label>
+                <input type="text" class="form-control form-control-sm bg-light" id="firstName" placeholder="" value="" required=""> </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 mb-3">
+                <div class="alert alert-warning" role="alert" style="padding:2px 15px 2px 15px; margin:-10px 0px -2px 0px ;">
+                  <span style="font-size: 14px">Doubble 3 - Add description here. Dynamically change it when a user selects.</span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Investment Date</label>
+                <input type="text" class="form-control form-control-sm" id="dob" placeholder="dd-mm-yyyy ex. 17-11-1960" value="" required="" name="dob" > </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Funding Account</label>
+                <input type="text" class="form-control form-control-sm" id="lastName" placeholder="" required="" value=""> </div>
+            </div>
+            <hr style="margin:0px 0px 15px 0px">
+            <p class="my-3">
+              <b>Beneficiary Information</b>
+            </p>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Select Beneficiary</label>
+                <br>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input bg-light" type="radio" value="option1" id="inlineRadio1" name="inlineRadioOptions"> Self </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" value="option2" id="inlineRadio2" name="inlineRadioOptions"> Other </label>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Beneficiary Account</label>
+                <input type="text" class="form-control form-control-sm" id="firstName" placeholder="Sterling Account Number" required="" value=""> </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Beneficiary Name</label>
+                <input type="text" class="form-control form-control-sm" id="firstName" placeholder="" value="" required=""> </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName" contenteditable="true">Referral Code
+                  <span style="font-size:13px">(optional)</span>
+                </label>
+                <input type="text" class="form-control form-control-sm" id="lastName" placeholder="" required="" value=""> </div>
+            </div>
+            <button class="btn btn-block btn-danger my-2" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-muted text-center py-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 m-0">
+          <p class="mb-1">© 2018 Doubble by Sterling</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

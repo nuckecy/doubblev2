@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Meta, title, CSS, favicons, etc. -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Doubble by Sterling</title>
+
+        <!-- Bootstrap -->
+        <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <!-- NProgress -->
+        <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+        <!-- jQuery custom content scroller -->
+        <link href="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+
+        <!-- Custom Theme Style -->
+        <link href="build/css/custom.min.css" rel="stylesheet">
+        <link href="build/css/dstyle.css" rel="stylesheet">
+
+        <link href="vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+        <link href="vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+        <link href="vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+        <link href="vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+        <link href="vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+    </head>
+
+    <body class="nav-md">
+        <div class="container body">
+            <div class="main_container">
+                <div class="col-md-3 left_col menu_fixed">
+                    <div class="left_col scroll-view">
+                        <div class="navbar nav_title" style="border: 0;">
+                            <a href="index.html" class="site_title"><i class="fas fa-adjust"></i> <span>Sterling Doubble</span></a>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <!-- menu profile quick info -->
+                        <div class="profile clearfix">
+                            <div class="profile_pic">
+                                <!-- Replace this with Name Abbreviation -->
+                                <div class="profile_icon">OO</div>
+                            </div>
+                            <div class="profile_info">
+                                <br>
+                                <h2>Welcome, Otobong</h2>
+                            </div>
+                        </div>
+                        <!-- /menu profile quick info -->
+
+                        <br />
+
+                        <!-- sidebar menu -->
+                        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                            <div class="menu_section">
+                                <h3>Menu</h3>
+                                <ul class="nav side-menu">
+                                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                                    <li><a><i class="far fa-folder-open"></i> Reports <span class="fas fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href="#">Pending Applications</a></li>
+                                            <li><a href="#">Completed Applications</a></li>
+                                            <li><a>Accounts <span class="fas fa-chevron-down"></span></a>
+                                                <ul class="nav child_menu">
+                                                    <li class="sub_menu"><a href="#">All Accounts</a></li>
+                                                    <li><a href="#">Accounts Partial</a></li>
+                                                    <li><a href="#">Accounts Completed</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a>Subscriptions <span class="fas fa-chevron-down"></span></a>
+                                                <ul class="nav child_menu">
+                                                    <li class="sub_menu"><a href="#">All Subscriptions</a></li>
+                                                    <li><a href="#">Doubble 3</a></li>
+                                                    <li><a href="#">Doubble 5</a></li>
+                                                    <li><a href="#">Doubble 10</a></li>
+                                                    <li><a href="#">Lump Sum</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#"><i class="fas fa-users"></i> Customers</a></li>
+                                    <li><a href="analytics.html"><i class="fas fa-chart-line"></i> Analytics</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /sidebar menu -->
+
+                        <!-- /menu footer buttons -->
+                        <div class="sidebar-footer hidden-small">
+
+                            <a data-toggle="tooltip" data-placement="top" title="Home" href="index.html">
+                                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top" title="Analytics" href="#">
+                                <span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top" title="Profile" href="profile.html">
+                                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                        <!-- /menu footer buttons -->
+                    </div>
+                </div>
+
+                <!-- top navigation -->
+                <div class="top_nav">
+                    <div class="nav_menu">
+                        <nav>
+                            <div class="nav toggle">
+                                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                            </div>
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="">
+                                    <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                        Otobong Okoko
+                                        <span class=" fa fa-angle-down"></span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                        <li><a href="javascript:;"><i class="fas fa-cog"></i> Profile</a></li>
+                                        <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- /top navigation -->
+
+                <!-- page content -->
+                <div class="right_col" role="main">
+                    <div class="">
+                        <div class="page-title">
+                            <div class="title_left">
+                                <h3>Dashboard <small> Sterling <strong>Admins</strong></small></h3>
+                            </div>
+
+                            <div class="title_right">
+                                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <div class="row top_tiles">
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="tile-stats">
+                                    <div class="icon"><i class="far fa-stop-circle"></i></div>
+                                    <div class="count">179</div>
+                                    <h3>Pending</h3>
+                                    <p>Uncompleted Applications</p>
+                                </div>
+                            </div>
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="tile-stats">
+                                    <div class="icon"><i class="fas fa-check-circle"></i></div>
+                                    <div class="count">179</div>
+                                    <h3>Completed</h3>
+                                    <p>Completed Applications</p>
+                                </div>
+                            </div>
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="tile-stats">
+                                    <div class="icon"><i class="fas fa-book-open"></i></div>
+                                    <div class="count">179</div>
+                                    <h3>Accounts</h3>
+                                    <p>Savings Accounts Opened</p>
+                                </div>
+                            </div>
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="tile-stats">
+                                    <div class="icon"><i class="fa fa-file-signature"></i></div>
+                                    <div class="count">179</div>
+                                    <h3>Documented</h3>
+                                    <p>Account with complete Documentation</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>Recent 100 Reports</h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+                                            <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <table id="datatable-buttons" class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Subscription</th>
+                                                    <th>Account</th>
+                                                    <th>Months</th>
+                                                    <th>Start Date</th>
+                                                    <th>Amount</th>
+                                                </tr>
+                                            </thead>
+
+
+                                            <tbody>
+                                                <tr>
+                                                    <td>Tiger Nixon</td>
+                                                    <td>D5</td>
+                                                    <td>Old</td>
+                                                    <td>61</td>
+                                                    <td>2011/04/25</td>
+                                                    <td>N320,800</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Garrett Winters</td>
+                                                    <td>D3</td>
+                                                    <td>New</td>
+                                                    <td>63</td>
+                                                    <td>2011/07/25</td>
+                                                    <td>N170,750</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ashton Cox</td>
+                                                    <td>D10</td>
+                                                    <td>New</td>
+                                                    <td>66</td>
+                                                    <td>2009/01/12</td>
+                                                    <td>N86,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cedric Kelly</td>
+                                                    <td>LS</td>
+                                                    <td>Old</td>
+                                                    <td>22</td>
+                                                    <td>2012/03/29</td>
+                                                    <td>N433,060</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Airi Satou</td>
+                                                    <td>D3</td>
+                                                    <td>Old</td>
+                                                    <td>33</td>
+                                                    <td>2008/11/28</td>
+                                                    <td>N162,700</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Brielle Williamson</td>
+                                                    <td>LS</td>
+                                                    <td>New</td>
+                                                    <td>61</td>
+                                                    <td>2012/12/02</td>
+                                                    <td>N372,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Herrod Chandler</td>
+                                                    <td>D5</td>
+                                                    <td>New</td>
+                                                    <td>59</td>
+                                                    <td>2012/08/06</td>
+                                                    <td>N137,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Rhona Davidson</td>
+                                                    <td>D3</td>
+                                                    <td>Old</td>
+                                                    <td>55</td>
+                                                    <td>2010/10/14</td>
+                                                    <td>N327,900</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Colleen Hurst</td>
+                                                    <td>LS</td>
+                                                    <td>New</td>
+                                                    <td>39</td>
+                                                    <td>2009/09/15</td>
+                                                    <td>N205,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sonya Frost</td>
+                                                    <td>D5</td>
+                                                    <td>Old</td>
+                                                    <td>23</td>
+                                                    <td>2008/12/13</td>
+                                                    <td>N103,600</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jena Gaines</td>
+                                                    <td>D3</td>
+                                                    <td>Old</td>
+                                                    <td>30</td>
+                                                    <td>2008/12/19</td>
+                                                    <td>N90,560</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Quinn Flynn</td>
+                                                    <td>D3</td>
+                                                    <td>Old</td>
+                                                    <td>22</td>
+                                                    <td>2013/03/03</td>
+                                                    <td>N342,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Charde Marshall</td>
+                                                    <td>D3</td>
+                                                    <td>New</td>
+                                                    <td>36</td>
+                                                    <td>2008/10/16</td>
+                                                    <td>N470,600</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Haley Kennedy</td>
+                                                    <td>LS</td>
+                                                    <td>Old</td>
+                                                    <td>43</td>
+                                                    <td>2012/12/18</td>
+                                                    <td>N313,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tatyana Fitzpatrick</td>
+                                                    <td>D5</td>
+                                                    <td>Old</td>
+                                                    <td>19</td>
+                                                    <td>2010/03/17</td>
+                                                    <td>N385,750</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Michael Silva</td>
+                                                    <td>LS</td>
+                                                    <td>Old</td>
+                                                    <td>66</td>
+                                                    <td>2012/11/27</td>
+                                                    <td>N198,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Paul Byrd</td>
+                                                    <td>D10</td>
+                                                    <td>New</td>
+                                                    <td>64</td>
+                                                    <td>2010/06/09</td>
+                                                    <td>N725,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Gloria Little</td>
+                                                    <td>D10</td>
+                                                    <td>New</td>
+                                                    <td>59</td>
+                                                    <td>2009/04/10</td>
+                                                    <td>N237,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bradley Greer</td>
+                                                    <td>D3</td>
+                                                    <td>Old</td>
+                                                    <td>41</td>
+                                                    <td>2012/10/13</td>
+                                                    <td>N132,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dai Rios</td>
+                                                    <td>D3</td>
+                                                    <td>Old</td>
+                                                    <td>35</td>
+                                                    <td>2012/09/26</td>
+                                                    <td>N217,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jenette Caldwell</td>
+                                                    <td>D3</td>
+                                                    <td>New</td>
+                                                    <td>30</td>
+                                                    <td>2011/09/03</td>
+                                                    <td>N345,000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                <div class="row top_tiles">
+                                    <div class="animated flipInY col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="tile-subs">
+                                            <div class="count">179</div>
+                                            <p>D3 Subscriptions</p>
+                                        </div>
+                                    </div>
+                                    <div class="animated flipInY col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="tile-subs">
+                                            <div class="count">179</div>
+                                            <p>D5 Subscriptions</p>
+                                        </div>
+                                    </div>
+                                    <div class="animated flipInY col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="tile-subs">
+                                            <div class="count">179</div>
+                                            <p>D10 Subscriptions</p>
+                                        </div>
+                                    </div>
+                                    <div class="animated flipInY col-lg-6 col-md-6 col-sm-6  col-xs-12">
+                                        <div class="tile-subs">
+                                            <div class="count">179</div>
+                                            <p>LS Subscriptions</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <!-- /page content -->
+
+                <!-- footer content -->
+                <footer>
+                    <div class="pull-right">
+                        Doubble - by <a href="https://sterlingbankng.com">Sterling Bank Plc</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </footer>
+                <!-- /footer content -->
+            </div>
+        </div>
+
+        <!-- jQuery -->
+        <script src="vendors/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- FastClick -->
+        <script src="vendors/fastclick/lib/fastclick.js"></script>
+        <!-- NProgress -->
+        <script src="vendors/nprogress/nprogress.js"></script>
+        <!-- jQuery custom content scroller -->
+        <script src="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <!-- Datatables -->
+        <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+        <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+        <script src="vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+        <script src="vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+        <script src="vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+        <script src="vendors/jszip/dist/jszip.min.js"></script>
+        <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
+        <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
+
+        <!-- Custom Theme Scripts -->
+        <script src="build/js/custom.min.js"></script>
+    </body>
+</html>
