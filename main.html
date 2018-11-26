@@ -1,0 +1,668 @@
+<div ng-controller="AnchorScroller">
+<nav class="navbar navbar-expand-md navbar-light sticky-top bg-white-op pt-0 pb-0">
+    <div class="container" id="home">
+        <a ng-click="home()" class="navbar-brand">
+        <img src="https://d32wlusbkxfia2.cloudfront.net/assets/img/logo_.png" alt="Doubble Logo" class="d-inline-block align-top img-fluid" width="170"> </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarLightSupportedContent" role="tab" aria-selected="false" aria-controls="navbarLightSupportedContent" aria-expanded="false" aria-label="Menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end pt-1" id="navbarLightSupportedContent">
+        <ul class="navbar-nav small text-doubble">
+          <li class="nav-item mx-1">
+            <a class="nav-link text-doubble" ng-click="home()"><i class="fa fa-home"></i></a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link text-doubble" ng-click="features()">Features</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link text-doubble" ng-click="plans()">Plans</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link text-doubble" ng-click="calc()">Calculate Earnings</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link text-doubble" ng-click="faq()">FAQ</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link text-doubble" ng-click="contact()">Contact Us</a>
+          </li>
+          <li ng-controller="metactrl">
+            <a class="btn navbar-btn ml-2 text-white btn-doubble-red hidden-xs" href="{{applink}}" target="_blank" rel="noopener noreferrer" > &nbsp;Apply Now</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<div ng-controller="MainController">
+
+<div class="text-white">
+    <div class="container">
+        <div class="row" >
+            <div class="align-self-center col-md-5 col-sm-12 col-12 mt-3">
+                <h1 class="text-doubble-lt flicker-4" style="font-size:57px">Stop Waiting</h1>
+                <h1 class="text-doubble heartbeat" style="font-size:57px">Start Investing</h1>
+                <p class="mb-3 text-dark">Get back up to 200% with Doubble. Ready?</p>
+                <a class="btn btn-lg btn-outline-doubble-red text-danger" href="#plans">Get Started</a>
+                <p class="mb-4 text-dark text-center" style="position:relative; margin-top: -50px;"><span style="font-size:0.6rem; position: absolute; margin-left: 0px;">Powered by</span> <img class="align-content-end" src="assets/img/sterling-logo-black.png" width="20%" ></p>
+            </div>
+            <div class="col-md-7 p-0">
+                <img src="https://d32wlusbkxfia2.cloudfront.net/assets/img/coin_base.jpg" alt="Doubble Bottles" class="heartbeat d-block img-fluid w-100">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="features"></div>
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-md-4"><img class="img-fluid d-block" alt="Doubble Coin" src="https://d32wlusbkxfia2.cloudfront.net/assets/img/coin_plate.jpg"> </div>
+        <div class="col-md-7 align-self-center">
+            <h1 class="text-doubble-lt">What is Doubble?</h1>
+            <p class="my-1 small small-m">Doubble is an automated investment platform that allows you invest at your convenience and get back up to 200% over a period.<br><br>
+                With Doubble, you choose to invest either in one contribution (lump sum) or monthly contributions – which could be for the duration of 3 years (36 months) or 5 years (60 months). All payouts are paid monthly in equal installments to you or any beneficiary of your choice.<br><br>
+                Ready to watch your money grow? Choose your variant and let us do the magic.</p>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <h1 class="col-12 text-doubble-lt mt-2 text-center" id="abtvar">Benefits of Doubble</h1>
+        <div class="row col-md-10 offset-md-1">
+            <ul class="clist">
+                <li class="small small-m">Enables you get loan facilities against your Doubble balance.</li>
+                <li class="small small-m">Provides the option of choosing a different beneficiary other than self (e.g. Spouse, Kid, Parents).</li>
+                <li class="small small-m">Empowers you to plan towards future consistent cash outflows such as payment for utilities, monthly upkeep & payment for mortgages.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="plans"></div>
+<div class="py-5 bg-light">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <h1 class="mb-2 text-doubble">Investment Plans</h1>
+                <div class="row text-left mt-3" >
+                    <div class="col-md-3 my-3">
+                        <div class="row mb-3">
+                            <div class="text-center">
+                                <h2 class="plans text-sterling-red"><i class="fa fa-money"></i> Doubble 3</h2>
+                            </div>
+                        </div>
+                        <ul class="small small-m clist">
+                            <li>Doubble 3 is a 6- year contract plan</li>
+                            <li>Monthly contributions are made by you(contributor) for the first 3years</li>
+                            <li>Sterling Bank pays out invested amount plus returns to beneficiary every month for the next 3 years</li>
+                            <li>Returns earned is 25% on invested funds</li>
+                            <li>You can apply now and choose a future start date</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 my-3">
+                        <div class="row mb-3">
+                            <div class="text-center">
+                                <h2 class="plans text-sterling-red"><i class="fa fa-money"></i> Doubble 5</h2>
+                            </div>
+                        </div>
+                        <ul class="small small-m clist">
+                            <li>Doubble 5 is a 10- year contract plan</li>
+                            <li>Monthly contributions are made by you(contributor) for the first 5 years</li>
+                            <li>Sterling Bank pays out invested amount plus returns every month to beneficiary for the next 5 years</li>
+                            <li>Returns earned is 50% on invested funds</li>
+                            <li>You can apply now and choose a future start date</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 my-3">
+                        <div class="row mb-3">
+                            <div class="text-center">
+                                <h2 class="plans text-sterling-red"><i class="fa fa-money"></i> Doubble 10</h2>
+                            </div>
+                        </div>
+                        <ul class="small small-m clist">
+                            <li>Doubble 10 is a 15- year contract plan</li>
+                            <li>Monthly contributions are made by you for the first 5 years</li>
+                            <li>Sterling Bank pays out invested amount plus returns to beneficiary every month for the next 10 years</li>
+                            <li>Returns earned is 100% on invested funds</li>
+                            <li>You can apply now and choose a future start date</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 my-3">
+                        <div class="row mb-3">
+                            <div class="text-center">
+                                <h2 class="plans text-sterling-red"><i class="fa fa-money"></i> Doubble Lump Sum</h2>
+                            </div>
+                        </div>
+                        <ul class="small small-m clist">
+                            <li>Doubble Lump Sum is a 10 -year contract plan</li>
+                            <li>Contribution is made in one bulk amount</li>
+                            <li>Sterling Bank pays out invested amount plus returns every month to the beneficiary from year 6 to year 10</li>
+                            <li>Returns earned is 100% on invested funds</li>
+                            <li>You can apply now and choose a future start date</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row" >
+                        <div class="col-md-6 col-sm-6 col-6 text-right">
+                            <a class="btn navbar-btn ml-2 text-white bg-doubble" href="{{homepath}}#calc">Calculate</a>
+                            <!--<a class="btn active m-3 btn-doubble px-4" href="{{homepath}}#calc">Calculate</a>-->
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-6 text-left" ng-controller="metactrl">
+                            <a class="btn navbar-btn ml-2 text-white btn-doubble-red" href="{{applink}}" target="_blank" rel="noopener noreferrer" > &nbsp;Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="calc"></div>
+<div class="py-5 bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="mb-2 text-doubble-lt text-center">Try out the Calculator</h1>
+                <p class="text-center">Put in how much you have, see how much you will get!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a href="" class="active nav-link text-doubble" data-toggle="tab" data-target="#tabone">
+                            <h4>Monthly Calculator</h4>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-doubble" href="" data-toggle="tab" data-target="#tabtwo">
+                            <h4>Lump Sum Calculator</h4>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content mt-2">
+                    <div class="tab-pane fade show active" id="tabone" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-12 m-2">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-3 bg-doubble">
+                                            <div class="card-body" style="border:none;">
+                                                <h1 class="text-center text-white">If you save</h1>
+                                                <form class="form">
+                                                    <div class="flex">
+                                                        <span class="currency">₦</span>
+                                                        <input type="text" ng-change="calDoubble()" ng-model="saveamt" aria-label="Calculate" commaseparator placeholder="Enter an Amount"> 
+                                                    </div>
+                                                </form>
+                                                <div class="small text-center text-white mt-3">{{saveamtnot}}</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 calc-m">
+                                            <p class="mb-0 text-center text-uppercase text-doubble-lt">
+                                                <b>Doubble 3</b>
+                                                <small class="small-m" style="font-size:9px;display:block;">will earn you</small>
+                                            </p>
+                                            <hr class="mb-1 mt-1">
+                                            <div class="text-center">
+                                                <h4 class="mb-0 text-doubble">
+                                                    <b>{{ted3| currency:"₦":2}}</b>
+                                                </h4>
+                                                <small class="small-m text-doubble">25% returns plus total savings.</small>
+                                            </div>
+                                            <hr class="mb-2 mt-1">
+                                            <div class="text-center">
+                                                <h5 class="mb-0">
+                                                    <b class="text-doubble">{{mpd3| currency:"₦":2}}</b>
+                                                </h5>
+                                                <small class="small-m text-doubble-lt">Receivable for {{d3}} months and</small>
+                                            </div>
+                                            <hr class="mb-2 mt-1">
+                                            <div class="text-center">
+                                                <h5 class="mb-0">
+                                                    <b class="text-doubble">{{tsd3| currency:"₦":2}}</b>
+                                                </h5>
+                                                <small class="smaller small-m text-doubble">Total Savings for only {{m3}} months.</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 calc-m">
+                                            <p class="mb-0 text-center text-uppercase text-doubble-lt">
+                                                <b>Doubble 5</b>
+                                                <small style="font-size:9px;display:block;">will earn you</small>
+                                            </p>
+                                            <hr class="mb-1 mt-1">
+                                            <div class="text-center">
+                                                <h4 class="mb-0 text-doubble">
+                                                    <b class="text-doubble">{{ted5| currency:"₦":2}}</b>
+                                                </h4>
+                                                <small class="small-m">50% returns plus total savings.</small>
+                                            </div>
+                                            <hr class="mb-2 mt-1">
+                                            <div class="text-center">
+                                                <h5 class="mb-0">
+                                                    <b class="text-doubble">{{mpd5| currency:"₦":2}}</b>
+                                                </h5>
+                                                <small class="small-m text-doubble-lt">Receivable for {{d5}} months and</small>
+                                            </div>
+                                            <hr class="mb-2 mt-1">
+                                            <div class="text-center">
+                                                <h5 class="mb-0">
+                                                    <b class="text-doubble">{{tsd5| currency:"₦":2}}</b>
+                                                </h5>
+                                                <small class="small-m smaller text-doubble">Total Savings for only {{m5}} months.</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 calc-m">
+                                            <p class="mb-0 text-center text-uppercase text-doubble-lt">
+                                                <b>Doubble 10</b>
+                                                <small class="small-m" style="font-size:9px;display:block;">will earn you</small>
+                                            </p>
+                                            <hr class="mb-1 mt-1">
+                                            <div class="text-center">
+                                                <h4 class="mb-0 text-doubble">
+                                                    <b class="text-doubble">{{ted10| currency:"₦":2}}</b>
+                                                </h4>
+                                                <small class="small-m">100% returns plus total savings.</small>
+                                            </div>
+                                            <hr class="mb-2 mt-1">
+                                            <div class="text-center">
+                                                <h5 class="mb-0">
+                                                    <b class="text-doubble">{{mpd10| currency:"₦":2}}</b>
+                                                </h5>
+                                                <small class="small-m text-doubble-lt">Receivable for {{d10}} months and</small>
+                                            </div>
+                                            <hr class="mb-2 mt-1">
+                                            <div class="text-center">
+                                                <h5 class="mb-0">
+                                                    <b class="text-doubble">{{tsd10| currency:"₦":2}}</b>
+                                                </h5>
+                                                <small class="small-m smaller text-doubble">Total Savings for only {{m10}} months.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5 col-xs-12"></div>
+                                        <div class="col-md-7 col-xs-12 ad-m" ng-controller="metactrl">
+                                            <a class="btn navbar-btn ml-2 mt-3 text-white btn-doubble-red" href="{{applink}}" target="_blank" rel="noopener noreferrer" > &nbsp;Apply Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tabtwo" role="tabpanel">
+                        <div class="col-md-12 m-2">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-3 bg-doubble">
+                                        <div class="card-body" style="border:none;">
+                                            <h1 class="text-center text-white">Jump Start your Bulk Investment</h1>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 bg-light">
+                                        <div class="card-body bg-light" style="border:none;">
+                                            <h4 class="text-center text-doubble-lt">If you start your investment with</h4>
+                                            <form class="form">
+                                                <div class="flex">
+                                                    <span class="currency">₦</span>
+                                                    <input type="text" ng-change="calDoubble()" ng-model="savels" aria-label="Calculate" commaseparator placeholder="Enter an Amount"> </div>
+                                            </form>
+                                            <div class="small font-weight-light text-doubble text-center mt-3">{{savelsnot}}</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mt-3">
+                                        <h4 class="text-center text-doubble-lt">60 months Investment will earn</h4>
+                                        <div class="text-center">
+                                            <h2 class="mb-0">
+                                                <b class="text-doubble">{{tls| currency:"₦":2}}</b>
+                                            </h2>
+                                        </div>
+                                        <hr class="mb-2 mt-1">
+                                        <div class="row">
+                                            <div class="col-md-6" style="border-right:1px solid #ccc;">
+                                                <div class="text-center">
+                                                    <h4 class="mb-0 text-doubble">
+                                                        <b class="text-doubble">{{tmls| currency:"₦":2}}</b>
+                                                    </h4>
+                                                    <small class="text-doubble-lt">Monthly Payment for {{mls}} Months</small>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="text-center">
+                                                    <h4 class="mb-0 text-doubble">
+                                                        <b class="text-doubble">{{savels| currency:"₦":2}}</b>
+                                                    </h4>
+                                                    <small class="text-doubble-lt">Total Contributions only.</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8"></div>
+                                    <div class="col-md-4 ad-m" ng-controller="metactrl">
+                                        <a class="btn navbar-btn ml-2 mt-3 text-white btn-doubble-red" href="{{applink}}" target="_blank" rel="noopener noreferrer" > &nbsp;Apply Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="faq"></div>
+<div class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" >
+                <div class="row my-3">
+                    <div class="col-md-12">
+                        <h1 class="mb-2 text-doubble text-center">Frequently Asked Questions</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row py-2">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="ch1">
+                                    <h4 class="panel-title">
+                                        <a class="acc-a text-doubble font-weight-light" role="button" data-toggle="collapse" data-parent="#accordion" href="#c1" aria-expanded="true" aria-controls="c1">
+                                            Can I pre-terminate my Investment?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="c1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="ch1">
+                                    <div class="panel-body">
+                                        <p class="small small-m text-justify">Yes. The investment plan can be pre-terminated. However, if terminated before the end of the tenor, you will get your full contributions forfeiting 50% of the accrued earnings.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="ch2">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed acc-a text-doubble font-weight-light" role="button" data-toggle="collapse" data-parent="#accordion" href="#c2" aria-expanded="false" aria-controls="c2">
+                                            How do I know my balance?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="c2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="ch2">
+                                    <div class="panel-body">
+                                        <p class="small small-m text-justify">You can view your balance on the platform using your log-in details.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="ch3">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed acc-a text-doubble font-weight-light" role="button" data-toggle="collapse" data-parent="#accordion" href="#c3" aria-expanded="false" aria-controls="c3">
+                                            Can I purchase multiple plans?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="c3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="ch3">
+                                    <div class="panel-body">
+                                        <p class="small small-m text-justify">Yes, you can purchase multiple plans for your benefit or other beneficiaries.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="ch4">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed acc-a text-doubble font-weight-light" role="button" data-toggle="collapse" data-parent="#accordion" href="#c4" aria-expanded="true" aria-controls="c4">
+                                            Can I opt for a lump sum payout instead of monthly payout?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="c4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="ch4">
+                                    <div class="panel-body">
+                                        <p class="small small-m text-justify">With Doubble, this is not possible as the plans are designed to pay out monthly over time to address future cashflow sustainability challenge. However, if due to an emergency, you need to collect the contribution in lump sum, the plan will be terminated. You will get your full contributions but will forfeit 50% of the accrued earnings.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="ch5">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed acc-a text-doubble font-weight-light" role="button" data-toggle="collapse" data-parent="#accordion" href="#c5" aria-expanded="false" aria-controls="c5">
+                                            Is the beneficiary transferable?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="c5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="ch5">
+                                    <div class="panel-body">
+                                        <p class="small small-m text-justify">Yes, you can select or nominate a new beneficiary for the pay-out period.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="ch6">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed acc-a text-doubble font-weight-light" role="button" data-toggle="collapse" data-parent="#accordion" href="#c6" aria-expanded="false" aria-controls="c6">
+                                            Can I just transfer any loose cash into my Doubble plan?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="c6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="ch6">
+                                    <div class="panel-body">
+                                        <p class="small small-m text-justify">No, the monthly contribution is automated from the start date of the plan. We recommend you start a new plan.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="ch7">
+                                    <h4 class="panel-title">
+                                        <a class="colapsed acc-a text-doubble font-weight-light" role="button" data-toggle="collapse" data-parent="#accordion" href="#c7" aria-expanded="false" aria-controls="c7">
+                                            What is the minimum monthly contribution amount?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="c7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="ch7">
+                                    <div class="panel-body">
+                                        <p class="small small-m text-justify">The minimum monthly contribution amount is N5,000.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="ch8">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed acc-a text-doubble font-weight-light" role="button" data-toggle="collapse" data-parent="#accordion" href="#c8" aria-expanded="false" aria-controls="c8">
+                                            What is the minimum lump sum amount?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="c8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="ch8">
+                                    <div class="panel-body">
+                                        <p class="small small-m text-justify">The minimum lump sum amount is N100,000.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="ch9">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed acc-a text-doubble font-weight-light" role="button" data-toggle="collapse" data-parent="#accordion" href="#c9" aria-expanded="false" aria-controls="c9">
+                                            What is the maximum amount to contribute on Doubble?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="c9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="ch9">
+                                    <div class="panel-body">
+                                        <p class="small small-m text-justify">We are glad to say, there is no maximum amount to invest on Doubble.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="ch13">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed acc-a text-doubble font-weight-light" role="button" data-toggle="collapse" data-parent="#accordion" href="#c13" aria-expanded="true" aria-controls="c13">
+                                            When will my account be debited and my Doubble Account funded?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="c13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="ch13">
+                                    <div class="panel-body">
+                                        <p class="small small-m text-justify">This will be on the day the first contribution was made for every month.  
+                                            <b>Example:</b> If your first contribution was made August 30th, your account will be debited and funded on the 30th of every month.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="ch14">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed acc-a text-doubble font-weight-light" role="button" data-toggle="collapse" data-parent="#accordion" href="#c14" aria-expanded="false" aria-controls="c14">
+                                            When do I get my monthly payout from the Bank?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="c14" class="panel-collapse collapse" role="tabpanel" aria-labelledby="ch14">
+                                    <div class="panel-body">
+                                        <p class="small small-m text-justify">Payouts are credited on the same date the first contribution was made each month. <br>
+                                            <b>Example:</b> If your Doubble account was funded on the 30th day of every month, your payouts will also be on the 30th of every month.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="ch15">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed acc-a text-doubble font-weight-light" role="button" data-toggle="collapse" data-parent="#accordion" href="#c15" aria-expanded="false" aria-controls="c15">
+                                            How do I fund my account?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="c15" class="panel-collapse collapse" role="tabpanel" aria-labelledby="ch15">
+                                    <div class="panel-body">
+                                        <p class="small small-m text-justify">
+                                            Funding your Doubble account is automated.<br><br>
+                                            If you are a Sterling Bank customer, you simply state the account to be debited. <br><br>
+                                            If you are not a Sterling Bank customer, you will have to transfer funds into your new Sterling Bank account opened for you. This account will then be debited automatically on the expected date of contribution.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="ch16">
+                                    <h4 class="panel-title">
+                                        <a class="colapsed acc-a text-doubble font-weight-light" role="button" data-toggle="collapse" data-parent="#accordion" href="#c16" aria-expanded="false" aria-controls="c16">
+                                            How long is my savings period before I start getting my payouts?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="c16" class="panel-collapse collapse" role="tabpanel" aria-labelledby="ch16">
+                                    <div class="panel-body">
+                                        <p class="small small-m text-justify">This depends on the Doubble Investment plan selected. <a class="text-doubble-lt" href="{{homepath}}#var">Click here</a> to read the options available.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="ch17">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed acc-a text-doubble font-weight-light" role="button" data-toggle="collapse" data-parent="#accordion" href="#c17" aria-expanded="false" aria-controls="c17">
+                                            How can I know my expected earnings before investing?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="c17" class="panel-collapse collapse" role="tabpanel" aria-labelledby="ch17">
+                                    <div class="panel-body">
+                                        <p class="small small-m text-justify">We have built a Calculator that shows all the information you need. <a href="{{homepath}}#calc" class="text-doubble-lt"><b>Try it by clicking here</b></a>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="ch19">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed acc-a text-doubble font-weight-light" role="button" data-toggle="collapse" data-parent="#accordion" href="#c19" aria-expanded="false" aria-controls="c19">
+                                            Is Doubble open to only customers of Sterling Bank?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="c19" class="panel-collapse collapse" role="tabpanel" aria-labelledby="ch19">
+                                    <div class="panel-body">
+                                        <p class="small small-m text-justify">No, Doubble is open to everyone. While applying, an account will be opened for you and your account details sent to your email immediately to enable you invest.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="ch20">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed acc-a text-doubble font-weight-light" role="button" data-toggle="collapse" data-parent="#accordion" href="#c20" aria-expanded="false" aria-controls="c20">
+                                            Can I choose a future start date when I apply now?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="c20" class="panel-collapse collapse" role="tabpanel" aria-labelledby="ch20">
+                                    <div class="panel-body">
+                                        <p class="small small-m text-justify">Yes, you can apply now and choose a convenient start date.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="ch18">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed acc-a text-doubble font-weight-light" role="button" data-toggle="collapse" data-parent="#accordion" href="#c18" aria-expanded="false" aria-controls="c18">
+                                            My questions have not been answered, who can I talk to?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="c18" class="panel-collapse collapse" role="tabpanel" aria-labelledby="ch18">
+                                    <div class="panel-body">
+                                        <p class="small small-m text-justify">Please send a mail to <a href="mailto:customercare@sterlingbankng.com" class="text-doubble-lt">customercare@sterlingbankng.com</a> or call us on <a href="tel:+23470078375464" class="text-doubble-lt">+234 700 STERLING (+234 700 7837 5464)</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contact"></div>
+<div class="py-2 mt-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" >
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="mt-2 text-doubble-lt text-center">Contact Us</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-md-12">
+                <div class="text-center">
+                    <p>Email: <a href="mailto:customercare@sterlingbankng.com" class="text-doubble-lt">customercare@sterlingbankng.com</a> or <br>Telephone <a href="tel:+23470078375464" class="text-doubble-lt">+234 700 STERLING (+234 700 7837 5464)</a></p>
+                    <div class="link-social">
+                        <a href="https://www.facebook.com/SterlingBankNigeria/" class="text-doubble-red" target="_blank" rel="noopener noreferrer">Facebook <i class="fa fa-facebook-square"></i> </a> | 
+                        <a href="https://twitter.com/Sterling_Bankng" class="text-doubble-red" target="_blank" rel="noopener noreferrer">Twitter <i class="fa fa-twitter-square"></i> </a> | 
+                        <a href="https://www.instagram.com/sterlingbank/" class="text-doubble-red" target="_blank" rel="noopener noreferrer">Instagram <i class="fa fa-instagram"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>

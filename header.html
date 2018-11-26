@@ -1,0 +1,36 @@
+<div ng-controller="AnchorScroller">
+<nav class="navbar navbar-expand-md navbar-light sticky-top bg-white-op pt-0 pb-0">
+    <div class="container" id="home">
+        <a ng-click="home()" class="navbar-brand">
+        <img src="https://d32wlusbkxfia2.cloudfront.net/assets/img/logo_.png" alt="Doubble Logo" class="d-inline-block align-top img-fluid" width="170"> </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarLightSupportedContent" role="tab" aria-selected="false" aria-controls="navbarLightSupportedContent" aria-expanded="false" aria-label="Menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end pt-1" id="navbarLightSupportedContent">
+        <ul class="navbar-nav small text-doubble">
+          <li class="nav-item mx-1">
+            <a class="nav-link text-doubble" ng-click="home()"><i class="fa fa-home"></i></a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link text-doubble" ng-click="features()">Features</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link text-doubble" ng-click="plans()">Plans</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link text-doubble" ng-click="calc()">Calculate Earnings</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link text-doubble" ng-click="faq()">FAQ</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link text-doubble" ng-click="contact()">Contact Us</a>
+          </li>
+          <li ng-controller="metactrl">
+            <a class="btn navbar-btn ml-2 text-white btn-doubble-red hidden-xs" href="{{applink}}" target="_blank" rel="noopener noreferrer" > &nbsp;Apply Now</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
