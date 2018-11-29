@@ -48,7 +48,7 @@
 
             //Lump Sum Calculation
             if ($scope.savels < 100000) {
-                $scope.savelsnot = "Minimum Monthly Savings is N100,000";
+                $scope.savelsnot = "Minimum Lump Sum Savings is N100,000";
             }
             //if($scope.savels < 100000){$scope.savelsnot = "Minimum Monthly Savings is N100,000";}
 
